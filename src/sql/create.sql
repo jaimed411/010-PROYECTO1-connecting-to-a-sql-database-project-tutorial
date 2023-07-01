@@ -20,6 +20,7 @@ CREATE TABLE books(
     isbn VARCHAR(13) NULL,
     published_date DATE,
     publisher_id INT NULL,
+    epub VARCHAR(3) NOT NULL,  -- Nueva columna 'epub'
     PRIMARY KEY(book_id),
     CONSTRAINT fk_publisher FOREIGN KEY(publisher_id) REFERENCES publishers(publisher_id)
 );
